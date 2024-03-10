@@ -8,24 +8,31 @@ All results are from Douglas Harper's fantastic Online Etymology Dictionary (htt
 
 ### How to use
 
-After installing and enabling this plugin, highlight all or parts of a word in your notes and run a search for it's etymology.
+Install and enable this plugin. Then, highlight all or part of a word in your notes and search for it's etymology.
+
+Click or tap an entry to copy it to your clipboard
 
 ![demo1](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo1.gif?raw=true)
+
+There are two ways to run Etyomology Lookup
 
 #### Run via ribbon menu
 
 Hit the "sprout" icon in the left ribbon
+![demo ribbon](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo-ribbon.gif?raw=true)
 
 #### Run via Command Palette
 
 (`Cmd` + `P`): "Etymology Lookup - Search"
 
-#### Copy
-
-Clicking on a result copies the entry to your clipboard, in case you are collecting word roots like Pokemon.
+![demo command palette](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo-cp.gif)
 
 ### Great for
 
 -   Internalizing the meaning of terms used in medicine, chemistry, biology, anatomy, law, philosophy, etc
 -   Learning English
 -   Nerds just plain curious about language history and word origins
+
+## Contribute
+
+Contributions via bug reports, feature requests and pull requests are welcome
