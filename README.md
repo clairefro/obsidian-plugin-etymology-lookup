@@ -11,10 +11,9 @@ This plugin fetches results from Douglas Harper's fantastic [Online Etymology Di
    
 ## How to use
 
-1. Install and enable this plugin
-2. Highlight all or part of a word in your notes
-3. Run search
-4. (Optional) Click or tap an entry to copy it to your clipboard
+1. Highlight all or part of a word in your notes
+2. Run search
+3. (Optional) Click or tap an entry to copy it to your clipboard
 
 ![demo1](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo1.gif?raw=true)
 
