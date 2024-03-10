@@ -6,9 +6,9 @@ All results are from Douglas Harper's fantastic Online Etymology Dictionary (htt
 
 ### How to use
 
-Install and enable this plugin. Then, highlight all or part of a word in your notes and search for it's etymology.
-
-Click or tap an entry to copy it to your clipboard
+1. Install and enable this plugin
+2. Highlight all or part of a word in your notes and search for it's etymology
+3. (Optional) Click or tap an entry to copy it to your clipboard
 
 ![demo1](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo1.gif?raw=true)
 
