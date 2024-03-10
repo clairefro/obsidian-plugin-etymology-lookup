@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-plugin-etymology-lookup",
 	"version": "1.0.0",
-	"description": "Look up and collect etymology of words in your Obsidian notes",
+	"description": "Get the etymology of words in your Obsidian notes",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
@@ -20,5 +20,8 @@
 		"obsidian": "latest",
 		"tslib": "2.4.0",
 		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.12"
 	}
 }
