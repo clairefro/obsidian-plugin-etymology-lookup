@@ -71,7 +71,7 @@ export default class EtymologyLookupPlugin extends Plugin {
 
 	onunload() {}
 
-	// Looks up the currentlyselected text
+	// Looks up the currently selected text
 	async lookup(selection: string | undefined) {
 		const modal = new EtymologyLookupModal(this.app, selection);
 		modal.open();
