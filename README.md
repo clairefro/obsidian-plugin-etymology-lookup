@@ -37,6 +37,4 @@ Contributions via bug reports, feature requests and pull requests are welcome
 
 ## Support
 
-If you like this plugin I'm grateful for potatoes
-
 <a href="https://www.buymeacoffee.com/clairefro"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a potato&emoji=🍠&slug=clairefro&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
