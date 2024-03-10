@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { getIdFromPath } from "./util";
+import { Entry } from "types";
 
 function getEntriesFromSearch(html: string): Entry[] {
 	const $ = cheerio.load(html);

@@ -2,6 +2,15 @@ import { App, Modal, Plugin } from "obsidian";
 import { Etymo } from "./lib/etymo-js";
 import { displayEntries } from "./util/displayEntries";
 
+/** TYPES */
+interface Entry {
+	term: string;
+	def: string;
+	path: string;
+	id: string;
+}
+
+/** / TYPES */
 const etymo = new Etymo();
 
 class EtymologyLookupModal extends Modal {

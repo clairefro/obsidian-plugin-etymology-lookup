@@ -1,4 +1,5 @@
 import { Notice } from "obsidian";
+import { Entry } from "types";
 
 function displayEntries(entries: Entry[], contentEl: HTMLElement) {
 	if (!entries.length) {

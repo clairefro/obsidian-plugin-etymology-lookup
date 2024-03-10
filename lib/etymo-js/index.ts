@@ -1,7 +1,7 @@
 import { getEntriesFromSearch } from "./lib/cheerioOps";
 import { getHtml } from "./lib/get";
 import { BASE_URL } from "./constants";
-
+import { Entry } from "types";
 class Etymo {
 	async search(term: string): Promise<Entry[]> {
 		const url = this._buildSearchUrl(term);
