@@ -2,7 +2,7 @@
 
 Lookup the etymology of English words in your [Obsidian](https://obsidian.md/) notes.
 
-All results are from Douglas Harper's fantastic [Online Etymology Dictionary](https://www.etymonline.com). Because of this, using this plugin requires being connected to the internet. Consider thanking Douglas for this wonderful resource with a [donation](https://www.paypal.com/donate/?cmd=_donations&business=byronic106@yahoo.com&lc=US&item_name=Donation+to%20+Help+Keep+Etymonline+Free+and+Open&no_note=0&cn=&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted).
+This plugin fetches results from Douglas Harper's fantastic [Online Etymology Dictionary](https://www.etymonline.com) and therefore requires internet connection. Consider thanking Douglas for this wonderful resource with a [donation](https://www.paypal.com/donate/?cmd=_donations&business=byronic106@yahoo.com&lc=US&item_name=Donation+to%20+Help+Keep+Etymonline+Free+and+Open&no_note=0&cn=&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted).
 
 ### How to use
 
