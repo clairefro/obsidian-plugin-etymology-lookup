@@ -8,7 +8,7 @@ This plugin fetches results from Douglas Harper's fantastic [Online Etymology Di
 -   Internalizing the meaning of terms used in medicine, chemistry, biology, anatomy, law, philosophy, etc
 -   Learning English
 -   Nerds just plain curious about language history and word origins
--   
+   
 ### How to use
 
 1. Install and enable this plugin
