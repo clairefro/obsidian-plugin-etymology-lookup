@@ -1,16 +1,8 @@
 import { App, Modal, Plugin } from "obsidian";
 import { Etymo } from "./lib/etymo-js";
 import { displayEntries } from "./util/displayEntries";
+import { ellipsis } from "./util/ellipsis";
 
-/** TYPES */
-interface Entry {
-	term: string;
-	def: string;
-	path: string;
-	id: string;
-}
-
-/** / TYPES */
 const etymo = new Etymo();
 
 class EtymologyLookupModal extends Modal {
@@ -60,9 +52,7 @@ export default class EtymologyLookupPlugin extends Plugin {
 			"sprout",
 			"Etymology Lookup",
 			(event: MouseEvent) => {
-				if (!window) return;
-				const selection = window.getSelection()?.toString();
-				this.lookup(selection);
+				this.lookup(getCurrentSelectedText());
 			}
 		);
 
@@ -71,11 +61,23 @@ export default class EtymologyLookupPlugin extends Plugin {
 			id: "search",
 			name: "Search",
 			callback: () => {
-				const selected = getCurrentSelectedText();
-				console.log(selected);
-				this.lookup(selected);
+				this.lookup(getCurrentSelectedText());
 			},
 		});
+
+		// Adds to right click menu
+		this.registerEvent(
+			this.app.workspace.on("editor-menu", (menu) => {
+				const selection = getCurrentSelectedText();
+				menu.addItem((item) => {
+					item.setTitle(
+						`Get etymology of "${ellipsis(selection, 18)}"`
+					).onClick(() => {
+						this.lookup(selection);
+					});
+				});
+			})
+		);
 	}
 
 	onunload() {}
@@ -88,11 +90,9 @@ export default class EtymologyLookupPlugin extends Plugin {
 }
 
 function getCurrentSelectedText() {
-	const activeLeaf = this.app.workspace.activeLeaf;
+	const editor = this.app.workspace.activeEditor?.editor;
 
-	if (activeLeaf) {
-		const editor = activeLeaf.view.sourceMode.cmEditor;
-
+	if (editor) {
 		if (editor && editor.somethingSelected()) {
 			const selectedText = editor.getSelection();
 			return selectedText;
