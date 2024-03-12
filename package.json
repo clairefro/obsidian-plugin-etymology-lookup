@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-plugin-etymology-lookup",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get the etymology of words in your Obsidian notes",
 	"main": "main.js",
 	"scripts": {

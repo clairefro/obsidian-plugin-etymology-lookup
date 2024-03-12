@@ -12,7 +12,7 @@ All results are from Douglas Harper's fantastic [Online Etymology Dictionary](ht
 
 ![demo1](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo1.gif?raw=true)
 
-There are two ways to run Etyomology Lookup
+There are three ways to run Etyomology Lookup
 
 #### Run via ribbon menu
 
@@ -24,6 +24,10 @@ Hit the "sprout" icon in the left ribbon
 (`Cmd` + `P`): "Etymology Lookup - Search"
 
 ![demo command palette](https://github.com/clairefro/assets/blob/main/obsidian-plugin-etymology-lookup/demo-cp.gif)
+
+#### Run from right-click menu
+
+<img width="777" alt="image" src="https://github.com/clairefro/obsidian-plugin-etymology-lookup/assets/9841162/b7145d12-e23c-4f35-9aba-682df162a857">
 
 ### Great for
 
