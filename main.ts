@@ -52,7 +52,7 @@ export default class EtymologyLookupPlugin extends Plugin {
 			"sprout",
 			"Etymology Lookup",
 			(event: MouseEvent) => {
-				this.lookup(getCurrentSelectedText());
+				this.lookup(getCurrentSelectedText(this.app));
 			}
 		);
 
@@ -61,14 +61,14 @@ export default class EtymologyLookupPlugin extends Plugin {
 			id: "search",
 			name: "Search",
 			callback: () => {
-				this.lookup(getCurrentSelectedText());
+				this.lookup(getCurrentSelectedText(this.app));
 			},
 		});
 
 		// Adds to right click menu
 		this.registerEvent(
 			this.app.workspace.on("editor-menu", (menu) => {
-				const selection = getCurrentSelectedText();
+				const selection = getCurrentSelectedText(this.app);
 				menu.addItem((item) => {
 					item.setTitle(
 						`Get etymology of "${ellipsis(selection, 18)}"`
@@ -89,8 +89,8 @@ export default class EtymologyLookupPlugin extends Plugin {
 	}
 }
 
-function getCurrentSelectedText() {
-	const editor = this.app.workspace.activeEditor?.editor;
+function getCurrentSelectedText(app: App): string {
+	const editor = app.workspace.activeEditor?.editor;
 
 	if (editor) {
 		if (editor && editor.somethingSelected()) {
@@ -99,5 +99,5 @@ function getCurrentSelectedText() {
 		}
 	}
 
-	return null;
+	return "";
 }
