@@ -1,11 +1,11 @@
 {
-	"id": "etymology-lookup",
-	"name": "Etymology Lookup",
-	"version": "1.0.2",
-	"minAppVersion": "0.15.0",
-	"description": "Get the etymology of words in your notes",
-	"author": "Claire Froelich",
-	"authorUrl": "https://github.com/clairefro",
-	"fundingUrl": "https://www.buymeacoffee.com/clairefro",
-	"isDesktopOnly": false
+  "id": "etymology-lookup",
+  "name": "Etymology Lookup",
+  "version": "1.0.3",
+  "minAppVersion": "0.15.0",
+  "description": "Get the etymology of words in your notes",
+  "author": "Claire Froelich",
+  "authorUrl": "https://github.com/clairefro",
+  "fundingUrl": "https://www.buymeacoffee.com/clairefro",
+  "isDesktopOnly": false
 }
