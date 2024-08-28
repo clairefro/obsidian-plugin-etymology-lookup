@@ -30,7 +30,7 @@ class EtymologyLookupModal extends Modal {
     // scenario: no word selected
     else {
       contentEl.setText(
-        "Highlight a word in your notes to search it's etymology!"
+        "Highlight a word in your notes to search its etymology!"
       );
     }
   }
