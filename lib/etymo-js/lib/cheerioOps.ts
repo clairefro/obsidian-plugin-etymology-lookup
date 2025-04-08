@@ -7,8 +7,6 @@ import { BASE_URL } from "../constants";
 async function getEntriesFromSearch(html: string): Promise<Entry[]> {
 	const $ = cheerio.load(html);
 
-	console.log(html);
-
 	// Get all links and convert to array of promises to resolve linked terms
 	const entryPromises = $('a[href^="/word/"]:not(.crossreference):not(.link)')
 		.map(async (_i, el) => {
