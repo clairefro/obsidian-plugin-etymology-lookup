@@ -23,6 +23,7 @@ function displayEntries(entries: Entry[], contentEl: HTMLElement) {
 		itemEl.appendChild(entryTitleEl);
 
 		const entryDefEl = itemEl.createEl("p");
+		entryDefEl.style.whiteSpace = "pre-wrap";
 		entryDefEl.textContent = entry.def;
 		entryDefEl.className = "etymol-entry-def";
 		itemEl.appendChild(entryDefEl);

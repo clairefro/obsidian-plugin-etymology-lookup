@@ -4,4 +4,5 @@ function getIdFromPath(path: string): string {
 	return path.match(/\d+$/)?.[0]!;
 }
 
+const NEWLINE_DELIMITER = "\n\n---\n\n";
 export { getIdFromPath };

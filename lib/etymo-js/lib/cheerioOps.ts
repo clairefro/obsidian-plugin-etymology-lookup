@@ -1,24 +1,38 @@
 import * as cheerio from "cheerio";
 import { getIdFromPath } from "./util";
 import { Entry } from "types";
+import { getHtml } from "./getHtml";
+import { BASE_URL } from "../constants";
 
-function getEntriesFromSearch(html: string): Entry[] {
+async function getEntriesFromSearch(html: string): Promise<Entry[]> {
 	const $ = cheerio.load(html);
-	const entries: any[] = [];
 
-	const entriesNodes = $('[class^="word--"]');
+	console.log(html);
 
-	entriesNodes.each((_i, el) => {
-		const term = $(el).find('[class^="word__name--"]').text();
-		const def = $(el).find('[class^="word__defination--"]').text();
+	// Get all links and convert to array of promises to resolve linked terms
+	const entryPromises = $('a[href^="/word/"]:not(.crossreference):not(.link)')
+		.map(async (_i, el) => {
+			const $el = $(el);
+			const term = $el.find("span").first().text();
+			const path = $el.attr("href") as string;
 
-		const path = $(el).find("a")[0].attribs.href;
+			// Fetch HTML for this term
+			const termHtml = await getHtml(BASE_URL + path);
+			const $term = cheerio.load(termHtml);
 
-		const id = getIdFromPath(path);
-		const entry = { term, def, path, id } as unknown as Entry;
-		entries.push(entry);
-	});
+			const def = $term("section.-mt-4.-mb-2.lg\\:-mb-2 > p")
+				.map((_i, el) => $term(el).text())
+				.get()
+				.join("\n\n")
+				.trim()
+				.replace(/\t/g, "");
 
+			const id = getIdFromPath(path);
+			return { term, def, path, id } as Entry;
+		})
+		.get(); // Convert Cheerio object to array
+
+	const entries = await Promise.all(entryPromises);
 	return entries;
 }
 

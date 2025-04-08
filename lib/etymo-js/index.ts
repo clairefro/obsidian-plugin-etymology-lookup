@@ -1,5 +1,5 @@
 import { getEntriesFromSearch } from "./lib/cheerioOps";
-import { getHtml } from "./lib/get";
+import { getHtml } from "./lib/getHtml";
 import { BASE_URL } from "./constants";
 import { Entry } from "types";
 class Etymo {
