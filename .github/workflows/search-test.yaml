@@ -1,0 +1,36 @@
+name: Test Search
+
+on:
+    schedule:
+        - cron: "0 0 * * *" # Runs at 00:00 UTC every day
+    workflow_dispatch: # allow manual trigger
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run tests
+              run: npm test
+
+            - name: Notify on failure
+              if: failure()
+              uses: actions/github-script@v6
+              with:
+                  script: |
+                      github.rest.issues.create({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        title: '🚨 Etymology Scraper Test Failed',
+                        body: 'The daily etymology scraper test has failed. Please check the GitHub Actions logs for details.'
+                      })
