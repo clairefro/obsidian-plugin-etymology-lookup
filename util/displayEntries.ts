@@ -1,13 +1,26 @@
 import { Notice } from "obsidian";
 import { Entry } from "types";
 
-function displayEntries(entries: Entry[], contentEl: HTMLElement) {
+function displayEntries(
+	entries: Entry[],
+	contentEl: HTMLElement,
+	searchTerm: string
+) {
 	if (!entries.length) {
 		contentEl.setText("No etymology results found.");
 		return;
 	}
 
 	contentEl.setText("");
+
+	const infoSpanEl = contentEl.createEl("span");
+
+	infoSpanEl.addClass("etymol-info");
+	infoSpanEl.appendText("Results from ");
+
+	const linkEl = infoSpanEl.createEl("a");
+	linkEl.href = `https://www.etymonline.com/search?q=${searchTerm}`;
+	linkEl.innerText = "Online Etymology Dictionary";
 
 	const listEl = contentEl.createEl("ul");
 	listEl.className = "etymol-entries";
