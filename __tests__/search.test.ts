@@ -11,7 +11,7 @@ describe("Etymology scraper", () => {
 		console.log(`Found ${entries.length} entries for '${SEARCH_TERM}'`);
 		console.log(`First entry:`);
 		console.log(JSON.stringify(entries[0], null, 2));
-		expect(entries.length).toBeGreaterThan(1); // "hello" returns more than one result
+		expect(entries.length).toBeGreaterThan(1); // should returns more than one result
 		expect(entries[0]).toHaveProperty("term");
 		expect(entries[0]).toHaveProperty("def");
 		expect(entries[0]).toHaveProperty("path");
